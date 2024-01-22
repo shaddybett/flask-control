@@ -20,7 +20,7 @@ with app.app_context():
     new_book=Book(**book_data)
     new_student=Student(**student_data)
 
-with app.db.begin():
+with db.session.begin():
     db.session.add(new_book)
     db.session.add(new_student)
     db.session.commit()    
