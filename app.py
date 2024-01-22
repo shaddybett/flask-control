@@ -11,7 +11,7 @@ db.init_app(app)
 class BookData(Resource):
     def get(self):
        books = Book.query.all()
-       return books
+       return [book.__dict__ for book in books ]
     
 class StudentData(Resource):
     def get(self):
