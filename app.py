@@ -16,7 +16,7 @@ class BookData(Resource):
 class StudentData(Resource):
     def get(self):
         students = Student.query.all()
-        return students
+        return [student.__dict__ for student in students]
 
 api.add_resource(BookData,'/books')
 api.add_resource(StudentData,'/students')
