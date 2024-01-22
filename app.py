@@ -9,4 +9,5 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=False
 db.init_app(app)
 
 class BookData(Resource):
-    def get()
+    def get(self):
+        
