@@ -22,4 +22,4 @@ api.add_resource(BookData,'/books')
 api.add_resource(StudentData,'/students')
 
 if __name__=='__main__':
-    app.run(debug=True)
+    app.run(debug=True,port=5555)
