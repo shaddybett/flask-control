@@ -1,6 +1,6 @@
 from flask import Flask
-from server.models import db,Book,Student
-from server.app import app
+from models import db,Book,Student
+from app import app
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI']='sqlite:///control.db'

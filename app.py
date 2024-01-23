@@ -1,6 +1,6 @@
 from flask import Flask
 from flask_restful import Resource,Api
-from server.models import db,Book,Student
+from models import db,Book,Student
 
 app=Flask(__name__)
 api = Api(app)
