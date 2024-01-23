@@ -12,13 +12,19 @@ migrate = Migrate(app,db)
 class BookData(Resource):
     def get(self):
        books = Book.query.all()
-       return jsonify([book.__dict__ for book in books ])
+       return jsonify([book.to_dict() for book in books ])
     
+
+class Hello(Resource):
+    def get(self):
+        return "Hello"    
 class StudentData(Resource):
+
     def get(self):
         students = Student.query.all()
-        return [student.__dict__ for student in students]
+        return jsonify([student.to_dict() for student in students])
 
+api.add_resource(Hello,'/')
 api.add_resource(BookData,'/books')
 api.add_resource(StudentData,'/students')
 
