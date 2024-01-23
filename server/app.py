@@ -1,6 +1,6 @@
 from flask import Flask
 from flask_restful import Resource,Api
-from models import db,Book,Student
+from server.models import db,Book,Student
 
 app=Flask(__name__)
 api = Api(app)
@@ -22,4 +22,4 @@ api.add_resource(BookData,'/books')
 api.add_resource(StudentData,'/students')
 
 if __name__=='__main__':
-    app.run(debug=True,port=5555)
+    app.run(debug=True,port=4000)
